@@ -1,0 +1,561 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/helloIAmPau/node-spinner#readme"
+
+    >cli-spinner (v0.2.6)</a>
+</h1>
+<h4>A simple spinner</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-spinner">module cli-spinner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner">
+            function <span class="apidocSignatureSpan">cli-spinner.</span>Spinner
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-spinner.</span>Spinner.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-spinner.Spinner">module cli-spinner.Spinner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.Spinner">
+            function <span class="apidocSignatureSpan">cli-spinner.</span>Spinner
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.setDefaultSpinnerDelay">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.</span>setDefaultSpinnerDelay
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.setDefaultSpinnerString">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.</span>setDefaultSpinnerString
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-spinner.Spinner.</span>spinners</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-spinner.Spinner.prototype">module cli-spinner.Spinner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.clearLine">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>clearLine
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.isSpinning">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>isSpinning
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.setSpinnerDelay">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>setSpinnerDelay
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.setSpinnerString">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>setSpinnerString
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.setSpinnerTitle">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>setSpinnerTitle
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.start">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-spinner.Spinner.prototype.stop">
+            function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>stop
+            <span class="apidocSignatureSpan">(clear)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-spinner" id="apidoc.module.cli-spinner">module cli-spinner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner" id="apidoc.element.cli-spinner.Spinner">
+        function <span class="apidocSignatureSpan">cli-spinner.</span>Spinner
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Spinner = function (options){
+  if(!(this instanceof Spinner)) return new Spinner(options)
+
+  if(typeof options === &#x22;string&#x22;){
+    options = { text: options };
+  } else if(!options){
+    options = {};
+  }
+
+  this.text = options.text || &#x27;&#x27;;
+  this.setSpinnerString(defaultSpinnerString);
+  this.setSpinnerDelay(defaultSpinnerDelay);
+  this.onTick = options.onTick || defaultOnTick;
+  this.stream = options.stream || process.stdout;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-spinner.Spinner" id="apidoc.module.cli-spinner.Spinner">module cli-spinner.Spinner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.Spinner" id="apidoc.element.cli-spinner.Spinner.Spinner">
+        function <span class="apidocSignatureSpan">cli-spinner.</span>Spinner
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Spinner = function (options){
+  if(!(this instanceof Spinner)) return new Spinner(options)
+
+  if(typeof options === &#x22;string&#x22;){
+    options = { text: options };
+  } else if(!options){
+    options = {};
+  }
+
+  this.text = options.text || &#x27;&#x27;;
+  this.setSpinnerString(defaultSpinnerString);
+  this.setSpinnerDelay(defaultSpinnerDelay);
+  this.onTick = options.onTick || defaultOnTick;
+  this.stream = options.stream || process.stdout;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.setDefaultSpinnerDelay" id="apidoc.element.cli-spinner.Spinner.setDefaultSpinnerDelay">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.</span>setDefaultSpinnerDelay
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDefaultSpinnerDelay = function (value) {
+  defaultSpinnerDelay = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+**`Spinner.setDefaultSpinnerString(spinnerString)`**
+
+Sets the default spinner string for all newly created instances. Accepts either a String or an Integer index to reference the [built
+-in spinners](#demo).
+
+
+**`Spinner.<span class="apidocCodeKeywordSpan">setDefaultSpinnerDelay</span>(spinnerDelay)`**
+
+Sets the default spinner delay for all newly created instances.
+
+
+**`Spinner.setSpinnerTitle(spinnerTitle)`**
+
+Sets the spinner title. Use printf-style strings to position the spinner.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.setDefaultSpinnerString" id="apidoc.element.cli-spinner.Spinner.setDefaultSpinnerString">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.</span>setDefaultSpinnerString
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDefaultSpinnerString = function (value) {
+  defaultSpinnerString = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+**`obj.setSpinnerDelay(spinnerDelay)`**
+
+Sets the spinner animation speed.
+
+
+**`Spinner.<span class="apidocCodeKeywordSpan">setDefaultSpinnerString</span>(spinnerString)`**
+
+Sets the default spinner string for all newly created instances. Accepts either a String or an Integer index to reference the [built
+-in spinners](#demo).
+
+
+**`Spinner.setDefaultSpinnerDelay(spinnerDelay)`**
+
+Sets the default spinner delay for all newly created instances.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-spinner.Spinner.prototype" id="apidoc.module.cli-spinner.Spinner.prototype">module cli-spinner.Spinner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.clearLine" id="apidoc.element.cli-spinner.Spinner.prototype.clearLine">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>clearLine
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearLine = function (stream) {
+  readline.clearLine(stream, 0);
+  readline.cursorTo(stream, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+var obj = new Spinner(&#x27;processing.. %s&#x27;)
+
+var obj = new Spinner({
+    text: &#x27;processing.. %s&#x27;,
+    stream: process.stderr,
+    onTick: function(msg){
+        this.<span class="apidocCodeKeywordSpan">clearLine</span>(this.stream);
+        this.stream.write(msg);
+    }
+})
+```
+
+Create a new spinner object. The advanced options can be used in any combination, none of them are required.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.isSpinning" id="apidoc.element.cli-spinner.Spinner.prototype.isSpinning">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>isSpinning
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSpinning = function () {
+  return this.id !== undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+**`Spinner.setSpinnerTitle(spinnerTitle)`**
+
+Sets the spinner title. Use printf-style strings to position the spinner.
+
+
+**`Spinner.<span class="apidocCodeKeywordSpan">isSpinning</span>()`**
+
+Returns true/false depending on whether the spinner is currently spinning.
+
+##Demo
+
+To see a demonstration of the built-in spinners, point your console at the `example` folder and run:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.setSpinnerDelay" id="apidoc.element.cli-spinner.Spinner.prototype.setSpinnerDelay">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>setSpinnerDelay
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSpinnerDelay = function (n) {
+  this.delay = n;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+**`obj.setSpinnerString(spinnerString)`**
+
+Sets the spinner string. Accepts either a String or an Integer index to reference the [built-in spinners](#demo).
+
+
+**`obj.<span class="apidocCodeKeywordSpan">setSpinnerDelay</span>(spinnerDelay)`**
+
+Sets the spinner animation speed.
+
+
+**`Spinner.setDefaultSpinnerString(spinnerString)`**
+
+Sets the default spinner string for all newly created instances. Accepts either a String or an Integer index to reference the [built
+-in spinners](#demo).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.setSpinnerString" id="apidoc.element.cli-spinner.Spinner.prototype.setSpinnerString">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>setSpinnerString
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSpinnerString = function (str) {
+  this.chars = mapToSpinner(str, this.spinners).split(&#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Example usage
+
+````javascript
+var Spinner = require(&#x27;cli-spinner&#x27;).Spinner;
+
+var spinner = new Spinner(&#x27;processing.. %s&#x27;);
+spinner.<span class="apidocCodeKeywordSpan">setSpinnerString</span>(&#x27;|/-\\&#x27;);
+spinner.start();
+````
+
+## API
+
+```
+var obj = new Spinner(&#x27;processing.. %s&#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.setSpinnerTitle" id="apidoc.element.cli-spinner.Spinner.prototype.setSpinnerTitle">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>setSpinnerTitle
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSpinnerTitle = function (str) {
+  this.text = str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+**`Spinner.setDefaultSpinnerDelay(spinnerDelay)`**
+
+Sets the default spinner delay for all newly created instances.
+
+
+**`Spinner.<span class="apidocCodeKeywordSpan">setSpinnerTitle</span>(spinnerTitle)`**
+
+Sets the spinner title. Use printf-style strings to position the spinner.
+
+
+**`Spinner.isSpinning()`**
+
+Returns true/false depending on whether the spinner is currently spinning.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.start" id="apidoc.element.cli-spinner.Spinner.prototype.start">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+
+  var current = 0;
+  var self = this;
+
+  this.id = setInterval(function() {
+    var msg = self.text.indexOf(&#x27;%s&#x27;) &#x3e; -1
+      ? self.text.replace(&#x27;%s&#x27;, self.chars[current])
+      : self.chars[current] + &#x27; &#x27; + self.text;
+
+    self.onTick(msg);
+
+    current = ++current % self.chars.length;
+  }, this.delay);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Example usage
+
+````javascript
+var Spinner = require(&#x27;cli-spinner&#x27;).Spinner;
+
+var spinner = new Spinner(&#x27;processing.. %s&#x27;);
+spinner.setSpinnerString(&#x27;|/-\\&#x27;);
+spinner.<span class="apidocCodeKeywordSpan">start</span>();
+````
+
+## API
+
+```
+var obj = new Spinner(&#x27;processing.. %s&#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-spinner.Spinner.prototype.stop" id="apidoc.element.cli-spinner.Spinner.prototype.stop">
+        function <span class="apidocSignatureSpan">cli-spinner.Spinner.prototype.</span>stop
+        <span class="apidocSignatureSpan">(clear)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (clear) {
+  clearInterval(this.id);
+  this.id = undefined;
+  if (clear) {
+    this.clearLine(this.stream);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+**`obj.start()`**
+
+Starts the spinner.
+
+
+**`obj.<span class="apidocCodeKeywordSpan">stop</span>(clean)`**
+
+Stops the spinner. Accepts a Boolean parameter to clean the console.
+
+
+**`obj.setSpinnerString(spinnerString)`**
+
+Sets the spinner string. Accepts either a String or an Integer index to reference the [built-in spinners](#demo).
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
