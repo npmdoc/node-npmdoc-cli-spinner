@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/helloIAmPau/node-spinner#readme"
-
-    >cli-spinner (v0.2.6)</a>
+    <a href="https://github.com/helloIAmPau/node-spinner#readme">cli-spinner (v0.2.6)</a>
 </h1>
 <h4>A simple spinner</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cli-spinner">module cli-spinner</a><ol>
 
@@ -396,13 +389,13 @@
     <li>description and source-code<pre class="apidocCodePre">Spinner = function (options){
   if(!(this instanceof Spinner)) return new Spinner(options)
 
-  if(typeof options === &#x22;string&#x22;){
+  if(typeof options === "string"){
     options = { text: options };
   } else if(!options){
     options = {};
   }
 
-  this.text = options.text || &#x27;&#x27;;
+  this.text = options.text || '';
   this.setSpinnerString(defaultSpinnerString);
   this.setSpinnerDelay(defaultSpinnerDelay);
   this.onTick = options.onTick || defaultOnTick;
@@ -467,7 +460,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Spinner.prototype.setSpinnerString = function (str) {
-  this.chars = mapToSpinner(str, this.spinners).split(&#x27;&#x27;);
+  this.chars = mapToSpinner(str, this.spinners).split('');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -502,9 +495,9 @@
   var self = this;
 
   this.id = setInterval(function() {
-    var msg = self.text.indexOf(&#x27;%s&#x27;) &#x3e; -1
-      ? self.text.replace(&#x27;%s&#x27;, self.chars[current])
-      : self.chars[current] + &#x27; &#x27; + self.text;
+    var msg = self.text.indexOf('%s') &gt; -1
+      ? self.text.replace('%s', self.chars[current])
+      : self.chars[current] + ' ' + self.text;
 
     self.onTick(msg);
 
@@ -582,13 +575,13 @@
     <li>description and source-code<pre class="apidocCodePre">Spinner = function (options){
   if(!(this instanceof Spinner)) return new Spinner(options)
 
-  if(typeof options === &#x22;string&#x22;){
+  if(typeof options === "string"){
     options = { text: options };
   } else if(!options){
     options = {};
   }
 
-  this.text = options.text || &#x27;&#x27;;
+  this.text = options.text || '';
   this.setSpinnerString(defaultSpinnerString);
   this.setSpinnerDelay(defaultSpinnerDelay);
   this.onTick = options.onTick || defaultOnTick;
@@ -683,10 +676,10 @@ Sets the default spinner delay for all newly created instances.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```
-var obj = new Spinner(&#x27;processing.. %s&#x27;)
+var obj = new Spinner('processing.. %s')
 
 var obj = new Spinner({
-    text: &#x27;processing.. %s&#x27;,
+    text: 'processing.. %s',
     stream: process.stderr,
     onTick: function(msg){
         this.<span class="apidocCodeKeywordSpan">clearLine</span>(this.stream);
@@ -771,24 +764,24 @@ Sets the default spinner string for all newly created instances. Accepts either 
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setSpinnerString = function (str) {
-  this.chars = mapToSpinner(str, this.spinners).split(&#x27;&#x27;);
+  this.chars = mapToSpinner(str, this.spinners).split('');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ## Example usage
 
 ````javascript
-var Spinner = require(&#x27;cli-spinner&#x27;).Spinner;
+var Spinner = require('cli-spinner').Spinner;
 
-var spinner = new Spinner(&#x27;processing.. %s&#x27;);
-spinner.<span class="apidocCodeKeywordSpan">setSpinnerString</span>(&#x27;|/-\\&#x27;);
+var spinner = new Spinner('processing.. %s');
+spinner.<span class="apidocCodeKeywordSpan">setSpinnerString</span>('|/-\\');
 spinner.start();
 ````
 
 ## API
 
 ```
-var obj = new Spinner(&#x27;processing.. %s&#x27;)
+var obj = new Spinner('processing.. %s')
 ...</pre></li>
     </ul>
 
@@ -838,9 +831,9 @@ Returns true/false depending on whether the spinner is currently spinning.
   var self = this;
 
   this.id = setInterval(function() {
-    var msg = self.text.indexOf(&#x27;%s&#x27;) &#x3e; -1
-      ? self.text.replace(&#x27;%s&#x27;, self.chars[current])
-      : self.chars[current] + &#x27; &#x27; + self.text;
+    var msg = self.text.indexOf('%s') &gt; -1
+      ? self.text.replace('%s', self.chars[current])
+      : self.chars[current] + ' ' + self.text;
 
     self.onTick(msg);
 
@@ -851,17 +844,17 @@ Returns true/false depending on whether the spinner is currently spinning.
 ## Example usage
 
 ````javascript
-var Spinner = require(&#x27;cli-spinner&#x27;).Spinner;
+var Spinner = require('cli-spinner').Spinner;
 
-var spinner = new Spinner(&#x27;processing.. %s&#x27;);
-spinner.setSpinnerString(&#x27;|/-\\&#x27;);
+var spinner = new Spinner('processing.. %s');
+spinner.setSpinnerString('|/-\\');
 spinner.<span class="apidocCodeKeywordSpan">start</span>();
 ````
 
 ## API
 
 ```
-var obj = new Spinner(&#x27;processing.. %s&#x27;)
+var obj = new Spinner('processing.. %s')
 ...</pre></li>
     </ul>
 
@@ -920,10 +913,10 @@ Sets the spinner string. Accepts either a String or an Integer index to referenc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```
-var obj = new Spinner(&#x27;processing.. %s&#x27;)
+var obj = new Spinner('processing.. %s')
 
 var obj = new Spinner({
-    text: &#x27;processing.. %s&#x27;,
+    text: 'processing.. %s',
     stream: process.stderr,
     onTick: function(msg){
         this.<span class="apidocCodeKeywordSpan">clearLine</span>(this.stream);
@@ -1023,24 +1016,24 @@ Sets the default spinner string for all newly created instances. Accepts either 
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setSpinnerString = function (str) {
-  this.chars = mapToSpinner(str, this.spinners).split(&#x27;&#x27;);
+  this.chars = mapToSpinner(str, this.spinners).split('');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ## Example usage
 
 ````javascript
-var Spinner = require(&#x27;cli-spinner&#x27;).Spinner;
+var Spinner = require('cli-spinner').Spinner;
 
-var spinner = new Spinner(&#x27;processing.. %s&#x27;);
-spinner.<span class="apidocCodeKeywordSpan">setSpinnerString</span>(&#x27;|/-\\&#x27;);
+var spinner = new Spinner('processing.. %s');
+spinner.<span class="apidocCodeKeywordSpan">setSpinnerString</span>('|/-\\');
 spinner.start();
 ````
 
 ## API
 
 ```
-var obj = new Spinner(&#x27;processing.. %s&#x27;)
+var obj = new Spinner('processing.. %s')
 ...</pre></li>
     </ul>
 
@@ -1100,9 +1093,9 @@ Returns true/false depending on whether the spinner is currently spinning.
   var self = this;
 
   this.id = setInterval(function() {
-    var msg = self.text.indexOf(&#x27;%s&#x27;) &#x3e; -1
-      ? self.text.replace(&#x27;%s&#x27;, self.chars[current])
-      : self.chars[current] + &#x27; &#x27; + self.text;
+    var msg = self.text.indexOf('%s') &gt; -1
+      ? self.text.replace('%s', self.chars[current])
+      : self.chars[current] + ' ' + self.text;
 
     self.onTick(msg);
 
@@ -1113,17 +1106,17 @@ Returns true/false depending on whether the spinner is currently spinning.
 ## Example usage
 
 ````javascript
-var Spinner = require(&#x27;cli-spinner&#x27;).Spinner;
+var Spinner = require('cli-spinner').Spinner;
 
-var spinner = new Spinner(&#x27;processing.. %s&#x27;);
-spinner.setSpinnerString(&#x27;|/-\\&#x27;);
+var spinner = new Spinner('processing.. %s');
+spinner.setSpinnerString('|/-\\');
 spinner.<span class="apidocCodeKeywordSpan">start</span>();
 ````
 
 ## API
 
 ```
-var obj = new Spinner(&#x27;processing.. %s&#x27;)
+var obj = new Spinner('processing.. %s')
 ...</pre></li>
     </ul>
 
@@ -1250,3 +1243,4 @@ Sets the default spinner delay for all newly created instances.
     ]
 </div>
 </div>
+</body></html>
