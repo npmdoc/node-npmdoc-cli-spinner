@@ -1,6 +1,6 @@
 # npmdoc-cli-spinner
 
-#### api documentation for  [cli-spinner (v0.2.6)](https://github.com/helloIAmPau/node-spinner#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cli-spinner.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cli-spinner) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cli-spinner.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cli-spinner)
+#### basic api documentation for  [cli-spinner (v0.2.6)](https://github.com/helloIAmPau/node-spinner#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cli-spinner.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cli-spinner) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cli-spinner.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cli-spinner)
 
 #### A simple spinner
 
@@ -71,7 +71,8 @@
         "url": "git+https://github.com/helloIAmPau/node-spinner.git"
     },
     "scripts": {},
-    "version": "0.2.6"
+    "version": "0.2.6",
+    "bin": {}
 }
 ```
 
